@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Project</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="wrapper" id="loginWrapper">
+      <button
+        type="submit"
+        class="btn"
+        name="submit"
+        value="login"
+        id="google-login-button"
+      >
+        Login with Google
+      </button>
+    </div>
+
+    <div class="user-info" id="userInfo" style="display: none">
+      <div id="username"></div>
+      <div id="useremail"></div>
+      <img src="" id="userprofile" alt="Profile Picture" class="profile-pic" />
+      <button id="logoutButton">Logout</button>
+      
+    </div>
+
+    <script src="js/login.js" defer type="module"></script>
+  </body>
+</html>
