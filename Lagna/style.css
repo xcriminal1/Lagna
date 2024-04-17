@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Clicker+Script&family=Raleway&family=Rubik&display=swap");
+/*      Sass Tempate       */
+/*    Global Classes   */
+button, button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.font-baloo {
+  font-family: "Baloo Thambi 2", cursive;
+}
+
+.font-rale {
+  font-family: "Raleway", cursive;
+}
+
+.font-rubik {
+  font-family: "Rubik", cursive;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+/*Color templates*/
+.color-primary {
+  color: #003859;
+}
+
+.color-primary-bg {
+  background: #003859;
+}
+
+.color-second {
+  color: #00A5c4;
+}
+
+.color-second-bg {
+  background: #000000;
+}
+
+.color-yellow {
+  color: #FFD289;
+}
+
+.color-yellow-bg {
+  background: #FFD289;
+}
+
+#header .navbar .collapse .navbar-nav .nav-item .nav-link{
+  color: #ffd2897a;
+}
+
+#header .navbar .collapse .navbar-nav .nav-item .nav-link:hover{
+  cursor: pointer;
+  color: #FFD289;
+}
+
+#header .navbar .collapse .navbar-nav .active .nav-link{
+  color: #FFD289;
+}
+
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 210, 137)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  
+}
+
+#top-sale .owl-carousel .item .product a {
+  overflow: hidden;
+}
+#top-sale .owl-carousel .item .product img {
+  transition: transform 0.5s ease;
+}
+#top-sale .owl-carousel .item .product img:hover {
+  transform: scale(1.01);
+}
+#top-sale .owl-carousel.owl-nav button {
+  position: absolute;
+  top: 30%;
+  outline: none;
+}
+#top-sale .owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+}
+#top-sale .owl-carousel .owl-nav button.owl-prev span {
+  font-size: 35px;
+  color: #003859;
+  margin-left: -4rem;
+  padding: 0 1rem;
+}
+#top-sale .owl-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+#top-sale .owl-carousel .owl-nav button.owl-next span {
+  font-size: 35px;
+  color: #003859;
+  margin-right: -4rem;
+  padding: 0 1rem;
+}
+
+#new .one img {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#new .one .details {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+#new .one:hover .details {
+  cursor: pointer;
+  background-color: #ffd28982
+}
+#new .one:hover{
+  cursor: pointer;
+  color: #ffd28982
+}
+
+#new .one .details button {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 800;
+  color: black;
+  border: none;
+  background: #FFD289;
+  text-transform: uppercase;
+  padding: 2.5px;
+  transform: translateY(70px);
+  transition: 0.3s ease;
+}
+
+#new .one .details button:hover {
+  color: black;
+  border-bottom: white;
+}
+
+#new .one:nth-child(1) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#new .one:nth-child(2) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#new .one:nth-child(3) .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#new .one .details h2 {
+  color: whitesmoke;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#banner {
+  background-image: url("./images/bannerImg4.jpg");
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: top 40px center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#banner h4 {
+  color: #FFD289;
+}
+
+#banner h1 {
+  color: #003859;
+}
+
+#banner button {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 800;
+  color: black;
+  border: none;
+  background: #FFD289;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transform: translateY(70px);
+  transition: 0.3s ease;
+}
+
+#banner button:hover{
+  color: white;
+}
+
+

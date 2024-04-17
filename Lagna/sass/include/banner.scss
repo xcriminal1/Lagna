@@ -1,0 +1,34 @@
+#banner{
+    background-image: url("./assets/Slide Show/IGTIUS.jpg");
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: top 40px center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#banner h4{
+    color: #FFD289;
+}
+
+#banner h1{
+    color: $color-primary;
+}
+
+#banner button{
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 800;
+    color: black;
+    border: none;
+    background: $color-yellow;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transform: translateY(70px);
+    transition: 0.3s ease;;
+}
