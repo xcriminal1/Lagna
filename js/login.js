@@ -6,12 +6,12 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBD3gnATiaSFfYzlBwiYdWdftSpP4u9vu8",
-  authDomain: "lagna-21508.firebaseapp.com",
-  projectId: "lagna-21508",
-  storageBucket: "lagna-21508.appspot.com",
-  messagingSenderId: "1067218312636",
-  appId: "1:1067218312636:web:a4e657dbdaabb77b251fb9",
+  apiKey: "AIzaSyD0z3Q4unnfkjk72siDBypp-q35u1di4TM",
+  authDomain: "lagna-20f93.firebaseapp.com",
+  projectId: "lagna-20f93",
+  storageBucket: "lagna-20f93.appspot.com",
+  messagingSenderId: "110175196813",
+  appId: "1:110175196813:web:f9f45af38700dfdd43b4c4"
 };
 
 const app = initializeApp(firebaseConfig);
