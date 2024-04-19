@@ -21,6 +21,10 @@ auth.languageCode = "en";
 
 const user = auth.currentUser;
 
+function redirectToIndex() {
+  window.location.href = "index.html";
+}
+
 const provider = new GoogleAuthProvider();
 
 const googleLogin = document.getElementById("google-login-button");
@@ -35,7 +39,7 @@ googleLogin.addEventListener("click", function () {
       localStorage.setItem("useremail", user.email);
       localStorage.setItem("userprofile", user.photoURL);
 
-      location.reload();
+      redirectToIndex();
     })
     .catch((error) => {
       const errorCode = error.code;
