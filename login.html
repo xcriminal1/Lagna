@@ -6,9 +6,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Project</title>
     <link rel="stylesheet" href="login.css" />
+    <style>
+      #google-login-button {
+        margin-top: 15px;
+      }
+      .create-account {
+        cursor: pointer;
+        margin-top: 15px;
+        transition: 0.2s all ease-in-out;
+      }
+      .create-account:hover {
+        color: rgb(231, 163, 16);
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Your custom CSS -->
+    <style>
+        /* Add custom CSS for header positioning */
+        .header {
+            position: value;
+            top: 0;
+            left: 0;
+            right: 0;
+            position: fixed;
+            z-index: 1000;
+            background-color: #000;
+            padding: 10px 0;
+            z-index: 1000; /* Ensure the header is above other content */
+            background-color: #000; /* Adjust as needed */
+            padding: 0; /* Adjust padding as needed */
+        }
+        
+        /* Add custom CSS for logo size */
+        .header img {
+            height: 50px;
+            /* Adjust height of the logo as needed */
+        }
+        /* Add custom CSS for toggler icon color */
+        .navbar-toggler-icon {
+            color: #ffd289 !important; /* Adjust color as needed */
+        }
+        /* Add custom CSS for navbar links */
+        .navbar-nav .nav-link {
+            color: #ffd289 !important; /* Adjust color as needed */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #fff !important; /* Adjust color on hover as needed */
+        }
+    </style>
+</head>
+<body>
+    <!-- Start Header -->
+    <div class="header sticky-top" id="header">
+        <!-- Start Primary Navigation Bar -->
+        <nav class="navbar navbar-expand-lg color-second-bg">
+            <img src="./images/logo_bgless.png" alt="Logo" class="mr-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-auto font-rubik font-size-20">
+                    <li class="nav-item">
+<!--                     
+                        <a class="nav-link" href="#"
+                          >HOME<span class="sr-only">(current)</span></a
+                        > -->
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">SERVICES</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="booking.html">BOOKING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contactus.html">CONTACT US</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login.html">LOGIN</a>
+                    </li>
+                    <!-- <li class="nav-item" id="loginNavItem">
+                        <a class="nav-link" href="login.html">PROFILE<span class="sr-only">(current)</span></a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+        <!-- End Primary Navigation Bar -->
+    </div>
+    <!-- End Header -->
+
+    <!-- Your other HTML content goes here -->
+
+    <!-- Bootstrap JS and jQuery (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
     <div class="wrapper" id="loginWrapper">
+      <form id="loginForm" action="">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input
+            type="text"
+            id="user"
+            name="user"
+            placeholder="Email"
+            required
+          />
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            id="pass"
+            name="pass"
+            placeholder="Password"
+            required
+          />
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+        <div class="input-box" id="confirmPassDiv" style="display: none">
+          <input
+            type="password"
+            id="confirmPass"
+            name="confirmPass"
+            placeholder="Confirm Password"
+            required
+          />
+          <i class="bx bxs-lock-alt"></i>
+        </div class="row" style="">
+        <button type="submit" id="loginButton" class="btn">Login</button>
+        <div>
+        <h6 href="#" id="toggleCreateAccount" class="create-account" style="color: rgb(0, 0, 0);">
+          Create account
+        </h6>
+        <h6 href="#" id="toggleCreateAccount" class="create-account" style="color: rgb(0, 0, 0);">
+          Forgot your password?
+        </h6>
+      </div>
+      </form>
+
+      <form
+        id="createAccountForm"
+        action=""
+        method="POST"
+        style="display: none"
+      >
+        <h1>Create Account</h1>
+        <div class="input-box">
+          <input
+            type="text"
+            id="newUser"
+            name="newUser"
+            placeholder="Email"
+            required
+          />
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            id="newPass"
+            name="newPass"
+            placeholder="Password"
+            required
+          />
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+
+        <button type="submit" id="createAccountButton" class="btn">
+          Create Account
+        </button>
+        <h4 href="#" id="toggleLogin" class="create-account">Login</h4>
+      </form>
       <button
         type="submit"
         class="btn"
@@ -25,9 +204,63 @@
       <div id="useremail"></div>
       <img src="" id="userprofile" alt="Profile Picture" class="profile-pic" />
       <button id="logoutButton">Logout</button>
-      
     </div>
 
     <script src="js/login.js" defer type="module"></script>
+    <script>
+      document
+        .getElementById("toggleCreateAccount")
+        .addEventListener("click", function () {
+          var loginForm = document.getElementById("loginForm");
+          var createAccountForm = document.getElementById("createAccountForm");
+          var loginButton = document.getElementById("loginButton");
+          var createAccountButton = document.getElementById(
+            "createAccountButton"
+          );
+
+          if (loginForm.style.display === "none") {
+            loginForm.style.display = "block";
+            createAccountForm.style.display = "none";
+            loginButton.style.display = "inline-block";
+            createAccountButton.style.display = "none";
+            document.getElementById("toggleCreateAccount").textContent =
+              "Create account";
+          } else {
+            loginForm.style.display = "none";
+            createAccountForm.style.display = "block";
+            loginButton.style.display = "none";
+            createAccountButton.style.display = "inline-block";
+            document.getElementById("toggleCreateAccount").textContent =
+              "Login";
+          }
+        });
+
+      document
+        .getElementById("toggleLogin")
+        .addEventListener("click", function () {
+          var loginForm = document.getElementById("loginForm");
+          var createAccountForm = document.getElementById("createAccountForm");
+          var loginButton = document.getElementById("loginButton");
+          var createAccountButton = document.getElementById(
+            "createAccountButton"
+          );
+
+          if (loginForm.style.display === "none") {
+            loginForm.style.display = "block";
+            createAccountForm.style.display = "none";
+            loginButton.style.display = "inline-block";
+            createAccountButton.style.display = "none";
+            document.getElementById("toggleCreateAccount").textContent =
+              "Create account";
+          } else {
+            loginForm.style.display = "none";
+            createAccountForm.style.display = "block";
+            loginButton.style.display = "none";
+            createAccountButton.style.display = "inline-block";
+            document.getElementById("toggleCreateAccount").textContent =
+              "Login";
+          }
+        });
+    </script>
   </body>
 </html>
