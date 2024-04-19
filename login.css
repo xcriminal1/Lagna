@@ -5,6 +5,81 @@
   box-sizing: border-box;
   font-family: "Poppins", "sans-serif";
 }
+/*# sourceMappingURL=style.css.map */
+button, button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.font-baloo {
+  font-family: "Baloo Thambi 2", cursive;
+}
+
+.font-rale {
+  font-family: "Raleway", cursive;
+}
+
+.font-rubik {
+  font-family: "Rubik", cursive;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+/*Color templates*/
+.color-primary {
+  color: #003859;
+}
+
+.color-primary-bg {
+  background: #003859;
+}
+
+.color-second {
+  color: #00A5c4;
+}
+
+.color-second-bg {
+  background: #000000;
+}
+
+.color-yellow {
+  color: #FFD289;
+}
+
+.color-yellow-bg {
+  background: #FFD289;
+}
+#header .navbar .collapse .navbar-nav .nav-item .nav-link{
+  color: #ffd2897a;
+}
+
+#header .navbar .collapse .navbar-nav .nav-item .nav-link:hover{
+  cursor: pointer;
+  color: #FFD289;
+}
+
+#header .navbar .collapse .navbar-nav .active .nav-link{
+  color: #FFD289;
+}
+
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 210, 137)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 body {
   font-family: "Poppins", sans-serif;
@@ -39,6 +114,7 @@ body {
   animation: expand 0.8s 0.6s ease-out forwards;
   
 }
+
 .form_wrapper h2 {
   font-size: 1.5em;
   line-height: 1.5em;
@@ -347,7 +423,7 @@ body {
   .form_container .row .col_half.last {
     border-left: none;
   }
-}/*# sourceMappingURL=style.css.map */
+}
 body {
   display: flex;
   justify-content: center;
@@ -363,6 +439,7 @@ body {
 .wrapper h1 {
   font-size: 36px;
   text-align: center;
+  color: #000000;
 }
 .wrapper .input-box {
   position: relative;
