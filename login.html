@@ -6,75 +6,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Project</title>
     <link rel="stylesheet" href="login.css" />
+    <style>
+      #google-login-button {
+        margin-top: 15px;
+      }
+      .create-account {
+        cursor: pointer;
+        margin-top: 15px;
+        transition: 0.2s all ease-in-out;
+      }
+      .create-account:hover {
+        color: rgb(231, 163, 16);
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
-    <div class="form_wrapper">
-      <div class="form_container">
-        <div class="title_container">
-          <h2>Login From</h2>
+    <div class="wrapper" id="loginWrapper">
+      <form id="loginForm" action="">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input
+            type="text"
+            id="user"
+            name="user"
+            placeholder="Email"
+            required
+          />
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            id="pass"
+            name="pass"
+            placeholder="Password"
+            required
+          />
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+        <div class="input-box" id="confirmPassDiv" style="display: none">
+          <input
+            type="password"
+            id="confirmPass"
+            name="confirmPass"
+            placeholder="Confirm Password"
+            required
+          />
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+        <button type="submit" id="loginButton" class="btn">Login</button>
+        <h4 href="#" id="toggleCreateAccount" class="create-account">
+          Create account
+        </h4>
+      </form>
+
+      <form
+        id="createAccountForm"
+        action=""
+        method="POST"
+        style="display: none"
+      >
+        <h1>Create Account</h1>
+        <div class="input-box">
+          <input
+            type="text"
+            id="newUser"
+            name="newUser"
+            placeholder="Email"
+            required
+          />
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            id="newPass"
+            name="newPass"
+            placeholder="Password"
+            required
+          />
+          <i class="bx bxs-lock-alt"></i>
         </div>
 
-        <div class="row clearfix">
-          <div>
-              <form>
-
-                  <div class="input_field">
-                      <span><i class="fa fa-envelope" aria-hidden="true"></i>
-                      </span>
-                      <input type="email" name="email" placeholder="Email" required>
-                  </div>
-
-                  <div class="input_field">
-                      <span><i class="fa fa-lock" aria-hidden="true"></i>
-                      </span>
-                      <input type="password" name="password" placeholder="Password" required>
-                  </div>
-
-
-
-                  <input class="button" type="submit" value="Login" onclick="redirectToIndex()">
-
-                  
-
-                  <div class="extraLinks">
-                      <a class="customLink" href="register.html">Create a new account</a>
-                      <a class="customLink" href="forgot.html">Forgot Password</a>
-
-                  </div>
-                  <div class="wrapper" id="loginWrapper">
-                    <button
-                      type="submit"
-                      class="btn"
-                      name="submit"
-                      value="login"
-                      id="google-login-button"
-                    >
-                      Login with Google
-                    </button>
-                  </div>
-
-              </form>
-          </div>
-        </div>
-      </div>
-  </div>
-  <script src="js/country.js"></script>
-  <script src="js/login.js"></script>
-
- 
+        <button type="submit" id="createAccountButton" class="btn">
+          Create Account
+        </button>
+        <h4 href="#" id="toggleLogin" class="create-account">Login</h4>
+      </form>
+      <button
+        type="submit"
+        class="btn"
+        name="submit"
+        value="login"
+        id="google-login-button"
+      >
+        Login with Google
+      </button>
+    </div>
 
     <div class="user-info" id="userInfo" style="display: none">
       <div id="username"></div>
       <div id="useremail"></div>
       <img src="" id="userprofile" alt="Profile Picture" class="profile-pic" />
       <button id="logoutButton">Logout</button>
-      
     </div>
-    <script>
-      function redirectToIndex() {
-        window.location.href = "index.html";
-      }
-    </script>
+
     <script src="js/login.js" defer type="module"></script>
+    <script>
+      document
+        .getElementById("toggleCreateAccount")
+        .addEventListener("click", function () {
+          var loginForm = document.getElementById("loginForm");
+          var createAccountForm = document.getElementById("createAccountForm");
+          var loginButton = document.getElementById("loginButton");
+          var createAccountButton = document.getElementById(
+            "createAccountButton"
+          );
+
+          if (loginForm.style.display === "none") {
+            loginForm.style.display = "block";
+            createAccountForm.style.display = "none";
+            loginButton.style.display = "inline-block";
+            createAccountButton.style.display = "none";
+            document.getElementById("toggleCreateAccount").textContent =
+              "Create account";
+          } else {
+            loginForm.style.display = "none";
+            createAccountForm.style.display = "block";
+            loginButton.style.display = "none";
+            createAccountButton.style.display = "inline-block";
+            document.getElementById("toggleCreateAccount").textContent =
+              "Login";
+          }
+        });
+
+      document
+        .getElementById("toggleLogin")
+        .addEventListener("click", function () {
+          var loginForm = document.getElementById("loginForm");
+          var createAccountForm = document.getElementById("createAccountForm");
+          var loginButton = document.getElementById("loginButton");
+          var createAccountButton = document.getElementById(
+            "createAccountButton"
+          );
+
+          if (loginForm.style.display === "none") {
+            loginForm.style.display = "block";
+            createAccountForm.style.display = "none";
+            loginButton.style.display = "inline-block";
+            createAccountButton.style.display = "none";
+            document.getElementById("toggleCreateAccount").textContent =
+              "Create account";
+          } else {
+            loginForm.style.display = "none";
+            createAccountForm.style.display = "block";
+            loginButton.style.display = "none";
+            createAccountButton.style.display = "inline-block";
+            document.getElementById("toggleCreateAccount").textContent =
+              "Login";
+          }
+        });
+    </script>
   </body>
 </html>
