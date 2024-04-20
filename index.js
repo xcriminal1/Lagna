@@ -1,12 +1,11 @@
 $(document).ready(function(){
-    // $("#banner-area .owl-carousel").owlCarousel({
-    //     dots:true,
-    //     items:1,
-    //     loop:true
-    // })
+    $("#banner-area .owl-carousel").owlCarousel({
+        dots:true,
+        items:1,
+        loop:true
+    })
 
-
-    $(".owl-carousel").owlCarousel({
+    $("#top-sale .owl-carousel").owlCarousel({
         loop: true,
         nav:true,
         dots:false,
