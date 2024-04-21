@@ -1,4 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 import {
   getAuth,
   GoogleAuthProvider,
@@ -91,3 +92,31 @@ var countries = new Array("Afghanistan", "Albania", "Algeria", "Andorra", "Angol
 //console.log(countries);
 //console.log(select);
     
+// const app  = initializeApp(firebaseConfig);
+
+
+
+// //inputs
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
+// //submit button
+
+
+const submit = document.getElementById('submit');
+submit.addEventListener("click", function(event) {
+    event.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed up 
+    const user = userCredential.user;
+    alert("Creating Account...")
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage)
+    // ..
+  });
+})
+//     //console.log(email
